@@ -1,0 +1,102 @@
+<ngx-hm-carousel show-num="auto" [autoplay-speed]="300" [between-delay]="500" [infinite]="infinite" [drag-many]="true" 
+    [breakpoint]="breakpoint" [data]="data" class="carousel c-accent">
+
+    <section ngx-hm-carousel-container class="content">
+        <article class="item cursor-pointer" ngx-hm-carousel-item *ngFor="let slide of data">
+            <div class="img d-flex justify-content-center align-items-center">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="{{slide.img}}" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr class="info">
+                                <td class="name">
+                                    {{slide.name}}
+                                </td>
+                                <td class="price">
+                                    {{slide.price}}
+                                </td>
+                            </tr>
+                            <tr class="options">
+                                <td>
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                        data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <i class="material-icons">
+                                            add_shopping_cart
+                                        </i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                        (click)="goToDetails(slide.code)" data-toggle="tooltip" data-placement="top"
+                                        title="View Details">
+                                        <i class="material-icons">
+                                            search
+                                        </i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <ng-template #infiniteContainer></ng-template>
+    </section>
+
+    <ng-template #carouselContent let-slide>
+        <article class="item cursor-pointer">
+            <div class="img d-flex justify-content-center align-items-center">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="{{slide.img}}" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr class="info">
+                                <td class="name">
+                                    {{slide.name}}
+                                </td>
+                                <td class="price">
+                                    {{slide.price}}
+                                </td>
+                            </tr>
+                            <tr class="options">
+                                <td>
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                        data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <i class="material-icons">
+                                            add_shopping_cart
+                                        </i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-secondary btn-block"
+                                        (click)="goToDetails(slide.code)" data-toggle="tooltip" data-placement="top"
+                                        title="View Details">
+                                        <i class="material-icons">
+                                            search
+                                        </i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </ng-template>
+
+    <ng-template #carouselPrev>
+        <div class="click-area">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </div>
+    </ng-template>
+    <ng-template #carouselNext>
+        <div class="click-area">
+            <i class="material-icons">keyboard_arrow_right</i>
+        </div>
+    </ng-template>
+
+</ngx-hm-carousel>
