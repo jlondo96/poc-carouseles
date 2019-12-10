@@ -3,6 +3,7 @@ import 'hammerjs';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { OwlModule } from 'ngx-owl-carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SwiperCarouselComponent } from './components/swiper-carousel/swiper.component';
@@ -35,7 +36,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    AppRoutingModule,
+    OwlModule
   ],
   bootstrap: [AppComponent]
 })
