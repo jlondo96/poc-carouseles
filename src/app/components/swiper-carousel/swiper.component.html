@@ -1,0 +1,37 @@
+<swiper [config]="config" *ngIf="!loader">
+    <ng-container *ngFor="let slide of data">
+        <div class="card">
+            <div class="card-img-container">
+                <img src="{{slide.img}}" class="card-img-top">
+            </div>
+            <div class="card-body">
+                <table>
+                <tr class="info">
+                    <td class="name">
+                    {{slide.name}}
+                    </td>
+                    <td class="price">
+                    {{slide.price}}
+                    </td>
+                </tr>
+                <tr class="options">
+                    <td>
+                    <button type="button" class="btn btn-outline-secondary btn-block"
+                    data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                        <i class="material-icons">
+                        add_shopping_cart
+                        </i>
+                    </button>     
+                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="goToDetails(slide.code)" 
+                        data-toggle="tooltip" data-placement="top" title="View Details">
+                        <i class="material-icons">
+                        search
+                        </i>
+                    </button>
+                    </td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </ng-container>
+</swiper>

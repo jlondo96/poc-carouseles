@@ -1,32 +1,34 @@
-[
+const data = [
     {
-        "img": "../images/imagen1.jpg",
+        "img": "assets/img/imagen1.jpg",
         "name": "Leon",
         "price": "$5",
         "code": "1"
     },
     {
-        "img": "../images/imagen2.jpg",
+        "img": "assets/img/imagen2.jpg",
         "name": "Calabera",
         "price": "$10",
         "code": "2"
     },
     {
-        "img": "../images/imagen3.jpg",
+        "img": "assets/img/imagen3.jpg",
         "name": "Mario",
         "price": "$15",
         "code": "3"
     },
     {
-        "img": "../images/imagen4.jpg",
+        "img": "assets/img/imagen4.jpg",
         "name": "Calabera",
         "price": "$20",
         "code": "4"
     },
     {
-        "img": "../images/imagen5.jpg",
+        "img": "assets/img/imagen5.jpg",
         "name": "Espiga",
         "price": "$25",
         "code": "5"
     }
 ]
+
+export default data;

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import data from './data/data';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'poc-carouseles';
+  itemsData = data;
 }
