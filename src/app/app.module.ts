@@ -14,6 +14,7 @@ import {
   SwiperConfigInterface,
   SwiperModule
 } from 'ngx-swiper-wrapper';
+import { NgxOwlCarouselComponent } from './components/ngx-owl-carousel/ngx-owl-carousel.component';
  
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -23,22 +24,23 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
-    SwiperCarouselComponent
+    SwiperCarouselComponent,
+    NgxOwlCarouselComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     FlexLayoutModule,
-    SwiperModule
+    SwiperModule,
+    OwlModule
   ],
   providers: [
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
     },
-    AppRoutingModule,
-    OwlModule
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
