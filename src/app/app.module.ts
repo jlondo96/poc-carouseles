@@ -17,18 +17,27 @@ import {
 } from 'ngx-swiper-wrapper';
 import { NgxOwlCarouselComponent } from './components/ngx-owl-carousel/ngx-owl-carousel.component';
 import { NgxHmCarouselComponent } from './components/ngx-hm-carousel/ngx-hm-carousel.component';
+import { NgxOwlCarouselOComponent } from './components/ngx-owl-carousel-o/ngx-owl-carousel-o.component';
+
+/* ngx-owl-carousel-o */
+import { Routes, RouterModule } from '@angular/router';
+// tslint:disable-next-line: max-line-length
+/* import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; SE NECESITA, SE COMENTA ES PORQUE YA SE ENCUENTRA ARRIBA */
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
 };
-
+const routes: Routes = [];
 @NgModule({
   declarations: [
     AppComponent,
     SwiperCarouselComponent,
     NgxOwlCarouselComponent,
-    NgxHmCarouselComponent
+    NgxHmCarouselComponent,
+    NgxOwlCarouselOComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,7 +47,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     OwlModule,
     NgxHmCarouselModule,
-    SwiperModule
+    SwiperModule,
+    /* ngx-owl-carousel-o INI*/
+    RouterModule.forRoot(routes),
+    CarouselModule
+  ],
+  /* ngx-owl-carousel-o FIN*/
+  exports: [
+    RouterModule
   ],
   providers: [
     {

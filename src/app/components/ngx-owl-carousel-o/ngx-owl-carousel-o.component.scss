@@ -1,0 +1,71 @@
+td {
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    height: 3rem;
+}
+
+.card {
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border: unset;
+    transition: 0.3s all;
+}
+
+div.container-body {
+    margin-left: 0%;
+}
+
+.card .btn-outline-secondary {
+    border: none;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card .card-img-top {
+    transition: 0.3s all;
+    text-align: center;
+}
+
+.card .card-body {
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    margin-top: 5px;
+    padding-bottom: 1.25rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card .card-body table {
+    width: 100%;
+}
+
+.card .card-body table .options {
+    margin-top: 10px;
+}
+
+.card .card-body table .info {
+    font-weight: bold;
+    color: grey;
+    font-size: 13px;
+    padding: 1.25rem;
+}
+
+.card .card-body table .info .name {
+    font-weight: bold;
+    color: grey;
+    font-size: 13px;
+}
+
+.card .card-body table .info .price {
+    color: rgb(235, 2, 165);
+    font-weight: bold;
+}
+
+.card .card-body table .options td .material-icons {
+    margin-top: 16px;
+    font-size: 30px;
+}
