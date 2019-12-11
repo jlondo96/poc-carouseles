@@ -30,12 +30,12 @@
                         "styles": [
                             "src/styles.scss",
                             "node_modules/material-design-icons/iconfont/material-icons.css",
-                            "../node_modules/owl.carousel/dist/assets/owl.carousel.css",
-                            "../node_modules/owl.carousel/dist/assets/owl.theme.default.css"
+                            "./node_modules/owl.carousel/dist/assets/owl.carousel.css",
+                            "./node_modules/owl.carousel/dist/assets/owl.theme.default.css"
                         ],
                         "scripts": [
-                            "../node_modules/jquery/dist/jquery.js",
-                            "../node_modules/owl.carousel/dist/owl.carousel.js"
+                            "./node_modules/jquery/dist/jquery.js",
+                            "./node_modules/owl.carousel/dist/owl.carousel.js"
                         ]
                     },
                     "configurations": {
