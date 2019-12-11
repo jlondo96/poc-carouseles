@@ -10,14 +10,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SwiperCarouselComponent } from './components/swiper-carousel/swiper.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { 
+import {
   SWIPER_CONFIG,
   SwiperConfigInterface,
   SwiperModule
 } from 'ngx-swiper-wrapper';
 import { NgxOwlCarouselComponent } from './components/ngx-owl-carousel/ngx-owl-carousel.component';
 import { NgxHmCarouselComponent } from './components/ngx-hm-carousel/ngx-hm-carousel.component';
- 
+
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
