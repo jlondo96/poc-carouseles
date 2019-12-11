@@ -3,6 +3,7 @@ import 'hammerjs';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 import { OwlModule } from 'ngx-owl-carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -15,6 +16,7 @@ import {
   SwiperModule
 } from 'ngx-swiper-wrapper';
 import { NgxOwlCarouselComponent } from './components/ngx-owl-carousel/ngx-owl-carousel.component';
+import { NgxHmCarouselComponent } from './components/ngx-hm-carousel/ngx-hm-carousel.component';
  
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -25,7 +27,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   declarations: [
     AppComponent,
     SwiperCarouselComponent,
-    NgxOwlCarouselComponent
+    NgxOwlCarouselComponent,
+    NgxHmCarouselComponent
   ],
   imports: [
     AppRoutingModule,
@@ -33,7 +36,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserModule,
     FlexLayoutModule,
     SwiperModule,
-    OwlModule
+    OwlModule,
+    NgxHmCarouselModule,
+    SwiperModule
   ],
   providers: [
     {

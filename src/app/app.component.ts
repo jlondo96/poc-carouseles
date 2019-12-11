@@ -9,4 +9,5 @@ import data from './data/data';
 })
 export class AppComponent {
   itemsData = data;
+  itemsLenght = 5;
 }
