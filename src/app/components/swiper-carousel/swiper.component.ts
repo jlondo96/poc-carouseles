@@ -13,6 +13,7 @@ export class SwiperCarouselComponent implements OnInit {
   @Input() loader: boolean;
 
   public config: SwiperConfigInterface = {
+    centeredSlides: true,
     loop: true,
     a11y: true,
     direction: 'horizontal',
@@ -29,19 +30,19 @@ export class SwiperCarouselComponent implements OnInit {
       },
       1000: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 20
       },
       1430: {
-        slidesPerView: 3,
-        spaceBetween: 40,
+        slidesPerView: 4,
+        spaceBetween: 40
       },
       1900: {
-        slidesPerView: 4,
-        spaceBetween: 60,
+        slidesPerView: 6,
+        spaceBetween: 60
       },
       5000: {
-        slidesPerView: 5,
-        spaceBetween: 80,
+        slidesPerView: 8,
+        spaceBetween: 80
       }
     },
     observer: true

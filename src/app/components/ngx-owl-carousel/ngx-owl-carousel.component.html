@@ -1,4 +1,4 @@
-<owl-carousel [options]="{items: 3, dots: false, navigation: false, loop: true}" [items]="data" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+<owl-carousel [options]="options" [items]="data" [carouselClasses]="['owl-theme', 'row', 'sliding']">
 
     <div class="card item" *ngFor="let slide of data;let i = index">
         <div class="card-img-container">
