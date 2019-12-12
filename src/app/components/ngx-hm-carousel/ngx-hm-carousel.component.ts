@@ -29,4 +29,5 @@ export class NgxHmCarouselComponent {
   ];
 
   constructor() { }
+  goToDetails(code: any) {}
 }

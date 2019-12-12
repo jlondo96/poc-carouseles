@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NgxOwlCarouselComponent implements OnInit {
 
   @Input() data: any[any];
-
+  
   options = {
     center: true,
     items: 1,
@@ -33,11 +33,13 @@ export class NgxOwlCarouselComponent implements OnInit {
         items: 10
       }
     }
-  }
+  };
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  goToDetails(code: any) {}
 
 }

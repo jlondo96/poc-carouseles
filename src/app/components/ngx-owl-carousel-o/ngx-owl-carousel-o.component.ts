@@ -32,4 +32,6 @@ export class NgxOwlCarouselOComponent implements OnInit {
   onResize(event) {
     this.ngOnInit();
   }
+  
+  goToDetails(code: any) {}
 }
