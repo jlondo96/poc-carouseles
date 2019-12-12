@@ -20,6 +20,7 @@ export class AppComponent {
     navSpeed: 700,
     navText: ['', ''],
     autoplay: true,
+    autoplayTimeout: 1500,
     responsive: {
       0: {
         items: 1.5
@@ -31,7 +32,7 @@ export class AppComponent {
         items: 2
       },
       940: {
-        items: 2
+        items: 2.3
       }
     },
     nav: true
@@ -47,6 +48,7 @@ export class AppComponent {
     navSpeed: 700,
     navText: ['', ''],
     autoplay: true,
+    autoplayTimeout: 3000,
     responsive: {
       0: {
         items: 2.3
@@ -75,6 +77,7 @@ export class AppComponent {
     navSpeed: 700,
     navText: ['', ''],
     autoplay: true,
+    autoplayTimeout: 2500,
     responsive: {
       0: {
         items: 2
@@ -102,21 +105,21 @@ export class AppComponent {
     navSpeed: 700,
     navText: ['', ''],
     autoplay: true,
+    autoplayTimeout: 4000,
     responsive: {
       0: {
         items: 4.3
       },
       400: {
-        items: 4
+        items: 5
       },
       740: {
-        items: 4
+        items: 5
       },
       940: {
-        items: 4
+        items: 5
       }
     },
     nav: true
   };
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -28,4 +28,8 @@ export class NgxOwlCarouselOComponent implements OnInit {
     this.options4 = this.config4;
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.ngOnInit();
+  }
 }
