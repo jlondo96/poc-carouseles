@@ -18,7 +18,8 @@ export class AppComponent {
     dots: false,
     margin: 10,
     navSpeed: 700,
-    navText: ['', ''],
+    /*navText: ['', ''],*/
+    nav: false,
     autoplay: true,
     autoplayTimeout: 1500,
     responsive: {
@@ -31,11 +32,11 @@ export class AppComponent {
       740: {
         items: 2
       },
-      940: {
-        items: 2.3
+      1000: {
+        items: 2.3,
+        nav: true
       }
     },
-    nav: true
   };
 
   config2 = {
@@ -46,7 +47,6 @@ export class AppComponent {
     dots: false,
     margin: 10,
     navSpeed: 700,
-    navText: ['', ''],
     autoplay: true,
     autoplayTimeout: 3000,
     responsive: {
@@ -59,11 +59,11 @@ export class AppComponent {
       740: {
         items: 3
       },
-      940: {
-        items: 3
+      1000: {
+        items: 3,
+        nav: true
       }
     },
-    nav: true
   };
 
 
@@ -75,7 +75,6 @@ export class AppComponent {
     dots: false,
     margin: 10,
     navSpeed: 700,
-    navText: ['', ''],
     autoplay: true,
     autoplayTimeout: 2500,
     responsive: {
@@ -88,11 +87,11 @@ export class AppComponent {
       740: {
         items: 3
       },
-      940: {
-        items: 3
+      1000: {
+        items: 3,
+        nav: true
       }
     },
-    nav: true
   };
 
   config4 = {
@@ -103,7 +102,6 @@ export class AppComponent {
     dots: false,
     margin: 10,
     navSpeed: 700,
-    navText: ['', ''],
     autoplay: true,
     autoplayTimeout: 4000,
     responsive: {
@@ -111,15 +109,17 @@ export class AppComponent {
         items: 4.3
       },
       400: {
-        items: 5
+        items: 6,
+        loop: false
       },
       740: {
-        items: 5
+        items: 6,
+        loop: false
       },
       940: {
-        items: 5
+        items: 6,
+        loop: false
       }
     },
-    nav: true
   };
 }
