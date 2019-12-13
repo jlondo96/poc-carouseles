@@ -23,11 +23,15 @@ export class AppComponent {
     responsive: {
       0: {
         items: 3
+      },
+      1000: {
+        items: 5
       }
     },
   };
 
   config2 = {
+    stagePadding: 100,
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -40,12 +44,16 @@ export class AppComponent {
     autoplayTimeout: 1500,
     responsive: {
       0: {
-        items: 3
+        items: 2
+      },
+      1000: {
+        items: 4
       }
     },
   };
 
   config3 = {
+    stagePadding: 100,
     center: true,
     loop: true,
     mouseDrag: true,
@@ -58,13 +66,17 @@ export class AppComponent {
     autoplayTimeout: 3000,
     responsive: {
       0: {
-        items: 4
+        items: 3
+      },
+      1000: {
+        items: 5
       }
     }
   };
 
 
   config4 = {
+    center: true,
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -76,12 +88,16 @@ export class AppComponent {
     autoplayTimeout: 2500,
     responsive: {
       0: {
+        items: 3
+      },
+      1000: {
         items: 5
       }
     },
   };
 
   config5 = {
+    center: true,
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -93,7 +109,10 @@ export class AppComponent {
     autoplayTimeout: 4000,
     responsive: {
       0: {
-        items: 4
+        items: 3
+      },
+      1000: {
+        items: 5
       }
     },
   };
