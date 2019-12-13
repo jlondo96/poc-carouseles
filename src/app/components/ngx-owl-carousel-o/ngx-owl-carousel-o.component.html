@@ -1,116 +1,78 @@
-<h3>¡Lo nuevo!</h3>
-<owl-carousel-o [options]="options1">
-    <ng-container *ngFor="let slide of data">
-        <ng-template carouselSlide>
-            <div class="card item">
-                <div class="card-img-container">
-                    <img src="{{slide.img}}" class="card-img-top">
+<div *ngIf="imagesCarousel">    
+    <owl-carousel-o [options]="config">
+        <ng-container *ngFor="let slide of data">
+            <ng-template carouselSlide>
+                <div class="card item">
+                    <div class="card-img-container">
+                        <img src="{{slide.img}}" class="card-img-top">
+                    </div>
                 </div>
-            </div>
-        </ng-template>
-    </ng-container>
-</owl-carousel-o>
-<hr>
-<h3>Ofertas catálogo</h3>
-<owl-carousel-o [options]="options2">
-    <ng-container *ngFor="let slide of data">
-        <ng-template carouselSlide>
-            <div class="card item">
-                <div class="card-img-container">
-                    <img src="{{slide.img}}" class="card-img-top">
-                </div>
-                <div class="card-body">
-                    <table>
-                        <tr class="info">
-                            <td class="name">
-                                {{slide.name}}
-                            </td>
-                            <td class="price">
-                                {{slide.price}}
-                            </td>
-                        </tr>
-                        <tr class="options">
-                            <td>
-                                <button type="button" class="btn btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
+
+<div *ngIf="productsCarousel">
+    <owl-carousel-o [options]="config">
+        <ng-container *ngFor="let slide of data">
+            <ng-template carouselSlide>
+                <div class="card item">
+                    <div class="card-img-container">
+                        <img src="{{slide.img}}" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr class="info">
+                                <td class="name">
+                                    {{slide.name}}
+                                </td>
+                                <td class="price">
+                                    {{slide.price}}
+                                </td>
+                            </tr>
+                            <tr class="options">
+                                <td>
+                                    <button type="button" class="btn btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                        <i class="material-icons">
+                                        add_shopping_cart
+                                        </i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-secondary btn-block" (click)="goToDetails(slide.code)" data-toggle="tooltip" data-placement="top" title="View Details">
                                     <i class="material-icons">
-                                    add_shopping_cart
+                                    search
                                     </i>
                                 </button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-outline-secondary btn-block" (click)="goToDetails(slide.code)" data-toggle="tooltip" data-placement="top" title="View Details">
-                                <i class="material-icons">
-                                search
-                                </i>
-                            </button>
-                            </td>
-                        </tr>
-                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-            </div>
-        </ng-template>
-    </ng-container>
-</owl-carousel-o>
-<hr>
-<h3>Ofertas revista</h3>
-<owl-carousel-o [options]="options3">
-    <ng-container *ngFor="let slide of data">
-        <ng-template carouselSlide>
-            <div class="card item">
-                <div class="card-img-container">
-                    <img src="{{slide.img}}" class="card-img-top">
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
+
+<div *ngIf="categoryCarousel">
+    <owl-carousel-o [options]="config">
+        <ng-container *ngFor="let slide of data">
+            <ng-template carouselSlide>
+                <div class="card item categoria">
+                    <div class="card-img-container">
+                        <img src="{{slide.img}}" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr class="info">
+                                <td class="name">
+                                    {{slide.name}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <table>
-                        <tr class="info">
-                            <td class="name">
-                                {{slide.name}}
-                            </td>
-                            <td class="price">
-                                {{slide.price}}
-                            </td>
-                        </tr>
-                        <tr class="options">
-                            <td>
-                                <button type="button" class="btn btn-outline-secondary btn-block" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                    <i class="material-icons">
-                                    add_shopping_cart
-                                    </i>
-                                </button>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-outline-secondary btn-block" (click)="goToDetails(slide.code)" data-toggle="tooltip" data-placement="top" title="View Details">
-                                <i class="material-icons">
-                                search
-                                </i>
-                            </button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </ng-template>
-    </ng-container>
-</owl-carousel-o>
-<hr>
-<h3>Categorías</h3>
-<owl-carousel-o [options]="options4">
-    <ng-container *ngFor="let slide of data">
-        <ng-template carouselSlide>
-            <div class="card item categoria">
-                <div class="card-img-container">
-                    <img src="{{slide.img}}" class="card-img-top">
-                </div>
-                <div class="card-body">
-                    <table>
-                        <tr class="info">
-                            <td class="name">
-                                {{slide.name}}
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </ng-template>
-    </ng-container>
-</owl-carousel-o>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
