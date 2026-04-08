@@ -53,7 +53,23 @@ export class SwiperCarouselComponent implements OnInit {
   ngOnInit() {
   }
 
+  filteredData: any[] = [];
+  searchQuery: string = '';
+
+  filterItems() {
+    this.filteredData = [];
+    for (let i = 0; i <= this.data.length; i++) {
+      if (this.data[i].name.includes(this.searchQuery)) {
+        this.filteredData.push(this.data[i]);
+      }
+    }
+  }
+
   addToCart(code: string) {
+    const item = this.data.find(d => d.code == code);
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
     console.log("add to cart product " + code);
   }
 
